@@ -1,0 +1,10 @@
+[Event/lockkey-locked]
+Action=
+Execute=
+Logfile=
+TTS=
+
+[Event/stickykeys]
+Execute=
+Logfile=
+TTS=

@@ -1,0 +1,26 @@
+[Desktop Entry]
+DefaultProfile=Zsh.profile
+
+[Favorite Profiles]
+Favorites=Zsh -l.profile,Zsh.profile
+
+[KFileDialog Settings]
+Recent Files[$e]=2560x1600.png,file:///usr/share/wallpapers/Next/contents/images/1920x1080.png,file:///usr/share/wallpapers/Next/contents/images/2560x1600.png
+Recent URLs[$e]=file:///usr/share/wallpapers/Next/contents/images/,file:///usr/share/wallpapers/Next/contents/
+
+[KonsoleWindow]
+ShowMenuBarByDefault=false
+
+[MainWindow]
+Height 1080=675
+Height 808=808
+Height 831=785
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAAAAA74AAAKjAAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Width 1292=735
+Width 1477=735
+Width 1920=1278
+
+[TabBar]
+TabBarVisibility=ShowTabBarWhenNeeded

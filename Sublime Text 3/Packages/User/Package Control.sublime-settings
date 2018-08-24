@@ -1,0 +1,25 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AMPL language",
+		"APL Highlighting",
+		"Emmet",
+		"FileDiffs",
+		"GoGuru",
+		"Golang Tools Integration",
+		"HexViewer",
+		"HTML-CSS-JS Prettify",
+		"MoveTab",
+		"MoveText",
+		"Package Control",
+		"SideBarEnhancements",
+		"Solarized Color Scheme",
+		"Terminal",
+		"Theme - Solarized Flat",
+		"TypeScript"
+	]
+}

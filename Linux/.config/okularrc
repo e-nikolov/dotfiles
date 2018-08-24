@@ -1,0 +1,23 @@
+[Desktop Entry]
+FullScreen=false
+
+[KFileDialog Settings]
+Recent Files[$e]=RTS.B3-Cyclic Executives.pdf,file:$HOME/Desktop/RTS/RTS.B3-Specification-concepts.pdf,file:$HOME/Downloads/RTS.B4-Policies-1.pdf,file:$HOME/Downloads/RTS.B3-Reference Model.pdf,file:$HOME/Downloads/RTS.B3-Cyclic Executives.pdf
+Recent URLs[$e]=file:$HOME/Downloads/,file:$HOME/Desktop/RTS/
+
+[MainWindow]
+Height 1080=1027
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAO/AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1920=1920
+Window-Maximized 1080x1920=true
+
+[Recent Files]
+File1[$e]=$HOME/Downloads/vsp_eta01_overview_v1.1.pdf
+File2[$e]=$HOME/Desktop/RTS/RTS.C7-Periodic Tasks.pdf
+File3[$e]=$HOME/Desktop/RTS/Eindhoven lecture 2.pdf
+File4[$e]=$HOME/Downloads/Slides for DTC payments gateway.pdf
+Name1[$e]=vsp_eta01_overview_v1.1.pdf
+Name2[$e]=RTS.C7-Periodic Tasks.pdf
+Name3[$e]=Eindhoven lecture 2.pdf
+Name4[$e]=Slides for DTC payments gateway.pdf

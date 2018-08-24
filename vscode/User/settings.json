@@ -1,0 +1,9 @@
+{
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "terminal.integrated.fontFamily": "'Hack'",
+    "go.useLanguageServer": true,
+    "workbench.colorTheme": "Darcula Theme from IntelliJ",
+    "gitlens.historyExplorer.enabled": true
+}

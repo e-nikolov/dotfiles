@@ -1,0 +1,10 @@
+766b.go-outliner
+Shan.code-settings-sync
+carolynvs.dep
+eamodio.gitlens
+k--kato.intellij-idea-keybindings
+ms-vscode.Go
+ms-vsliveshare.vsliveshare
+slevesque.vscode-hexdump
+trinm1709.dracula-theme-from-intellij
+

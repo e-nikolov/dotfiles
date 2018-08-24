@@ -1,0 +1,84 @@
+[Containments][29][General]
+AppletOrder=30
+
+[Containments][34][General]
+AppletOrder=35
+
+[Containments][36][General]
+AppletOrder=37;38;40;42
+
+[KFileDialog Settings]
+Recent Files[$e]=Popcorn-Time,file:///opt/sublime_text/Icon/256x256/sublime-text.png,file:$HOME/PopcornTime/src/app/images/icon.png,file:$HOME/PopcornTime/Popcorn-Time
+Recent URLs[$e]=file:$HOME/PopcornTime/,file:$HOME/PopcornTime/src/app/images/,file:///opt/sublime_text/Icon/256x256/
+
+[KPropertiesDialog]
+Height 1080=410
+Width 1920=303
+
+[PlasmaRunnerManager]
+LaunchCounts=1 services_icons.desktop,2 services_kcm_sddm.desktop,7 services_google-chrome.desktop,1 services_systemsettings.desktop,1 services_org.kde.konsole.desktop,14 services_Gogland-2.desktop,1 services_Sublime Text.desktop,9 services_firefox.desktop,1 services_nic.desktop,1 baloosearch_/home/enikolov/Downloads/New Folder/janus-builds/node_modules/readline/test/fixtures/afile.txt,1 services_kcm_driver_manager.desktop,3 services_screenlocker.desktop,1 services_kwintouchscreen.desktop,2 services_org.kde.kcalc.desktop,1 services_kwindecoration.desktop,2 services_org.kde.k3b.desktop,17 services_Popcorn Time.desktop,2 services_skypeforlinux.desktop,4 services_org.kde.PartitionManager.desktop,2 services_kcm_networkmanagement.desktop,2 services_fonts.desktop,1 services_jetbrains-webstorm.desktop,1 services_org.kde.yakuake.desktop,1 services_mongodb-compass-beta.desktop,1 services_autostart.desktop,21 services_slack.desktop,2 services_kcmusb.desktop,4 services_kcm_desktoptheme.desktop,1 services_mouse.desktop,2 services_org.kde.kinfocenter.desktop,10 services_kcm_kscreen.desktop,2 services_org.kde.ksysguard.desktop,2 services_kcm_touchpad.desktop,1 services_mongodb-compass.desktop,19 services_steam.desktop,2 services_keys.desktop
+pluginWhiteList=services,places,desktopsessions,PowerDevil,shell,bookmarks,recentdocuments,locations,baloosearch
+
+[PlasmaViews][Panel 2][Horizontal1680]
+thickness=30
+
+[PlasmaViews][Panel 2][Horizontal1920]
+thickness=30
+
+[PlasmaViews][Panel 29][Horizontal1920]
+thickness=36
+
+[PlasmaViews][Panel 29][Vertical1080]
+thickness=30
+
+[PlasmaViews][Panel 31][Horizontal1920]
+thickness=30
+
+[PlasmaViews][Panel 31][Vertical1080]
+thickness=28
+
+[PlasmaViews][Panel 32][Horizontal1920]
+thickness=36
+
+[PlasmaViews][Panel 32][Vertical1080]
+thickness=28
+
+[PlasmaViews][Panel 34][Horizontal1920]
+thickness=21
+
+[PlasmaViews][Panel 36][Horizontal1920]
+thickness=74
+
+[PlasmaViews][Panel 36][Vertical1080]
+thickness=28
+
+[PlasmaViews][Panel 42][Horizontal1920]
+thickness=32
+
+[PlasmaViews][Panel 42][Vertical1080]
+thickness=30
+
+[PlasmaViews][Panel 60][Horizontal1920]
+maxLength=1920
+minLength=1920
+thickness=32
+
+[PlasmaViews][Panel 60][Vertical1080]
+thickness=30
+
+[PlasmaViews][Panel 81][Horizontal1920]
+thickness=36
+
+[PlasmaViews][Panel 81][Vertical1080]
+thickness=30
+
+[ScreenConnectors]
+0=DP-2
+1=DP-1
+2=HDMI-1
+3=eDP-1
+4=HDMI-1-1
+5=DP-1-1
+
+[Updates]
+performed=/usr/share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js

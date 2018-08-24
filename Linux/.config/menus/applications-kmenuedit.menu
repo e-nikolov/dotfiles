@@ -1,0 +1,45 @@
+<!DOCTYPE Menu PUBLIC '-//freedesktop//DTD Menu 1.0//EN' 'http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd'>
+<Menu>
+ <Menu>
+  <Name>Development</Name>
+  <Include>
+   <Filename>Sublime Text.desktop</Filename>
+   <Filename>Gogland-2.desktop</Filename>
+   <Filename>Gogland.desktop</Filename>
+  </Include>
+  <Exclude/>
+  <Layout>
+   <Merge type="files"/>
+   <Filename>Gogland.desktop</Filename>
+   <Filename>kde4-kdiff3.desktop</Filename>
+   <Filename>meld.desktop</Filename>
+   <Filename>Sublime Text.desktop</Filename>
+   <Merge type="menus"/>
+   <Menuname>Translation</Menuname>
+   <Menuname>Web Development</Menuname>
+   <Filename>Gogland-2.desktop</Filename>
+  </Layout>
+ </Menu>
+ <Menu>
+  <Name>Multimedia</Name>
+  <Layout>
+   <Merge type="files"/>
+   <Filename>Popcorn Time.desktop</Filename>
+   <Filename>kde4-amarok.desktop</Filename>
+   <Filename>org.kde.dragonplayer.desktop</Filename>
+   <Filename>org.kde.k3b.desktop</Filename>
+   <Separator/>
+   <Merge type="menus"/>
+   <Menuname>More</Menuname>
+  </Layout>
+  <Include>
+   <Filename>Popcorn Time.desktop</Filename>
+  </Include>
+ </Menu>
+ <Menu>
+  <Name>.hidden</Name>
+  <Include>
+   <Filename>Gogland.desktop</Filename>
+  </Include>
+ </Menu>
+</Menu>

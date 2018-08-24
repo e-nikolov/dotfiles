@@ -1,0 +1,15 @@
+[Added Associations]
+application/x-shellscript=subl.desktop;
+application/x-x509-ca-cert=Sublime Text.desktop;kleopatra_import.desktop;
+text/plain=Sublime Text.desktop;org.kde.kate.desktop;libreoffice-writer.desktop;okularApplication_txt.desktop;
+
+[Default Applications]
+application/x-shellscript=subl.desktop;
+application/x-x509-ca-cert=Sublime Text.desktop;
+text/html=google-chrome.desktop
+text/plain=Sublime Text.desktop;
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/tg=telegramdesktop.desktop

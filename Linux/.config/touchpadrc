@@ -1,0 +1,10 @@
+[parameters]
+AccelFactor=0.03416689159870303
+CircScrollDelta=5.73
+FingerHigh=31
+HorizScrollDelta=2.7
+MaxSpeed=112.1897971031441
+MaxTapMove=3.4
+Tapping=false
+TwoFingerTapButton=MiddleButton
+VertScrollDelta=1.9

@@ -1,0 +1,5 @@
+[General]
+history=webs,gog,calc,zsh,minergate,steam,playon,fire,syste,subl,terminal,/bin/zsh
+
+[PlasmaRunnerManager]
+LaunchCounts=1 services_org.kde.ksysguard.desktop,1 shell_/bin/zsh,1 services_jetbrains-webstorm.desktop,1 services_debian-xterm.desktop,2 windows_0_100663553,2 services_org.kde.kcalc.desktop,1 services_Gogland-2.desktop

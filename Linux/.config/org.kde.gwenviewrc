@@ -1,0 +1,34 @@
+[MainWindow]
+Height 1080=1057
+Height 831=788
+State=AAAA/wAAAAD9AAAAAAAAB4AAAAO5AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+Width 1477=735
+Width 1920=1920
+Window-Maximized 1080x1920=true
+Window-Maximized 831x1477=true
+
+[Recent Files]
+File1[$e]=$HOME/Downloads/IMG_20170711_204313.jpg
+File2[$e]=$HOME/Desktop/pics/IMG_20170906_172358.jpg
+File3[$e]=$HOME/Desktop/pics/IMG_20170906_165752.jpg
+File4[$e]=$HOME/Downloads/spaces.png
+File5[$e]=$HOME/Downloads/2BSG100EB.1_large.jpeg
+File6[$e]=$HOME/Desktop/pics/IMG_20170906_173442.jpg
+File7[$e]=$HOME/Desktop/slon4e.png
+Name1[$e]=IMG_20170711_204313.jpg
+Name2[$e]=IMG_20170906_172358.jpg
+Name3[$e]=IMG_20170906_165752.jpg
+Name4[$e]=spaces.png
+Name5[$e]=2BSG100EB.1_large.jpeg
+Name6[$e]=IMG_20170906_173442.jpg
+Name7[$e]=slon4e.png
+
+[SideBar-BrowseMode]
+IsVisible=true
+
+[SideBar-FullScreenMode]
+IsVisible=false
+
+[SideBar-ViewMode]
+IsVisible=false

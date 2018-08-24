@@ -1,0 +1,11 @@
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/
+[user]
+	email = emil.e.nikolov@gmail.com
+	name = Emil Nikolov
+[core]
+	editor = subl -n -w
+[credential]
+	helper = cache --timeout=3600

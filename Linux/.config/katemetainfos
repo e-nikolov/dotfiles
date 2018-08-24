@@ -1,0 +1,98 @@
+[file:///etc/ssh/ssh_config]
+Bookmarks=
+Checksum=7801afd6da0a1135d3fb9ae5c1712726943fc655
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Time=2017,6,11,3,20,15
+URL=file:///etc/ssh/ssh_config
+
+[file:///home/enikolov/.ssh/config]
+Bookmarks=
+Checksum=07ff3a5e1497cb0d6c92a475e6370d3ef556f3f3
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Time=2017,6,11,3,20,42
+URL=file:///home/enikolov/.ssh/config
+
+[file:///home/enikolov/.zshrc]
+Bookmarks=
+Checksum=4e5c089b127a773e0c0531760868c1fb95b2c269
+Encoding=UTF-8
+Highlighting=Zsh
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Zsh
+Time=2017,6,14,3,41,30
+URL=file:///home/enikolov/.zshrc
+
+[file:///home/enikolov/Desktop/coreos.sh]
+Bookmarks=
+Checksum=8d1c8b69c3fce7bea45c73efd06983e3c419a92f
+Encoding=UTF-8
+Highlighting=Bash
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Bash
+Time=2017,6,14,3,5,44
+URL=file:///home/enikolov/Desktop/coreos.sh
+
+[file:///home/enikolov/Gogland-171.4424.55/Install-Linux-tar.txt]
+Bookmarks=
+Checksum=3d3942bf9789e5b93da3049da93e653844622442
+Encoding=UTF-8
+Highlighting=None
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Normal
+Time=2017,6,8,15,19,30
+URL=file:///home/enikolov/Gogland-171.4424.55/Install-Linux-tar.txt
+
+[file:///home/enikolov/Gogland-171.4424.55/bin/gogland.sh]
+Bookmarks=
+Checksum=6911898fd73dd632328a79db3bc1eb5a3e3c6032
+Encoding=UTF-8
+Highlighting=Bash
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=Bash
+Time=2017,6,8,15,19,30
+URL=file:///home/enikolov/Gogland-171.4424.55/bin/gogland.sh
+
+[file:///home/enikolov/sublime_text_3/sublime.py]
+Bookmarks=
+Checksum=1b5bc9ab103383b7617cb205a7f79440a30a9d6b
+Encoding=UTF-8
+Highlighting=Python
+Highlighting Set By User=false
+Indentation Mode=python
+Mode=Python
+Time=2017,6,8,0,45,21
+URL=file:///home/enikolov/sublime_text_3/sublime.py
+
+[file:///home/enikolov/sublime_text_3/sublime_text.desktop]
+Bookmarks=
+Checksum=c741945e957ce1f60b2b64bdbd523d9a3a1514f4
+Encoding=UTF-8
+Highlighting=.desktop
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=.desktop
+Time=2017,6,8,0,45,21
+URL=file:///home/enikolov/sublime_text_3/sublime_text.desktop
+
+[file:///media/enikolov/Data/go/src/bitbucket.org/unchain/ares-test/rabbitmq-compose/docker-compose.yml]
+Bookmarks=
+Checksum=966e1170188b7e9779fc95f7e85db5c773d2e2d6
+Encoding=UTF-8
+Highlighting=YAML
+Highlighting Set By User=false
+Indentation Mode=normal
+Mode=YAML
+Time=2017,6,14,3,19,1
+URL=file:///media/enikolov/Data/go/src/bitbucket.org/unchain/ares-test/rabbitmq-compose/docker-compose.yml

@@ -1,0 +1,10 @@
+[General]
+SplitterSizes=304,335
+
+[KFileDialog Settings]
+Recent Files[$e]=sublime_text,file:$HOME/Gogland-172.3757.2/bin/gogland.sh,file:$HOME/WebStorm-171.4694.29/bin/webstorm.svg,file:$HOME/WebStorm-171.4694.29/bin/webstorm.sh,file:$HOME/PopcornTime/src/app/images/icon.png,file:$HOME/PopcornTime/Popcorn-Time,file:///opt/sublime_text/Icon/256x256/sublime-text.png,file:///opt/sublime_text/sublime_text
+Recent URLs[$e]=file:$HOME/,file:///opt/sublime_text/Icon/256x256/,file:$HOME/PopcornTime/,file:$HOME/PopcornTime/src/app/images/,file:$HOME/Gogland-171.4424.55/bin/,file:$HOME/WebStorm-171.4694.29/bin/,file:$HOME/WebStorm-171.4694.29/,file:$HOME/Gogland-172.3757.2/bin/
+
+[MainWindow]
+State=AAAA/wAAAAD9AAAAAAAAAoAAAAGcAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled

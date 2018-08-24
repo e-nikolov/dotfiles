@@ -1,0 +1,46 @@
+[ExtractDialog]
+DirHistory[$e]=$HOME/Downloads/New Folder/
+Height 1080=560
+Width 1920=1280
+
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME,file:$HOME
+Recent URLs[$e]=file:$HOME/Downloads/New Folder/
+
+[KTextEditor::Search]
+Search History=chain.,key
+
+[MainWindow]
+State=AAAA/wAAAAD9AAAAAAAAAoAAAAGcAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+StatusBar=Disabled
+ToolBarsMovable=Disabled
+splitterSizes=426,213
+
+[Open-with settings]
+CompletionMode=5
+History=/opt/sublime_text/sublime_text %u
+
+[Recent Files]
+File1[$e]=$HOME/janus-base-repo/target.tar
+File10[$e]=$HOME/Downloads/61256-star-trek-discovery-s01e04-[English-subtitles.org].zip
+File2[$e]=$HOME/Downloads/gogland-172.3757.2.tar.gz
+File3[$e]=$HOME/Downloads/node-v6.11.2-linux-x64.tar.xz
+File4[$e]=$HOME/Downloads/softhsm-2.3.0.tar.gz
+File5[$e]=$HOME/Downloads/go1.9.linux-amd64.tar.gz
+File6[$e]=$HOME/Downloads/asm-add.zip
+File7[$e]=$HOME/Downloads/gogland-173.2696.28.tar.gz
+File8[$e]=$HOME/Downloads/studio-3t-linux-x64.tar.gz
+File9[$e]=$HOME/Downloads/mongobooster-4.0.2-x86_64.AppImage
+Name1[$e]=target.tar
+Name10[$e]=61256-star-trek-discovery-s01e04-[English-subtitles.org].zip
+Name2[$e]=gogland-172.3757.2.tar.gz
+Name3[$e]=node-v6.11.2-linux-x64.tar.xz
+Name4[$e]=softhsm-2.3.0.tar.gz
+Name5[$e]=go1.9.linux-amd64.tar.gz
+Name6[$e]=asm-add.zip
+Name7[$e]=gogland-173.2696.28.tar.gz
+Name8[$e]=studio-3t-linux-x64.tar.gz
+Name9[$e]=mongobooster-4.0.2-x86_64.AppImage
+
+[Viewer]
+Window-Maximized 1080x1920=true

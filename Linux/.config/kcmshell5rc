@@ -1,0 +1,22 @@
+[DownloadDialog Settings]
+Height 1080=522
+Width 1920=700
+
+[FileDialogSize]
+Height 1080=1021
+Width 1920=956
+
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/Desktop/kde.cfg,file:///usr/share/wallpapers/Next/contents/images/1920x1080.png
+Recent URLs[$e]=file:///usr/share/wallpapers/,file:$HOME/Downloads/,file:$HOME/Templates/,file:///usr/share/wallpapers/Next/contents/images/,file:///usr/share/wallpapers/Next/contents/
+
+[KPropertiesDialog]
+Height 1080=456
+Width 1920=418
+
+[Open-with settings]
+CompletionMode=5
+History=yakuake
+
+[PlasmaRunnerManager]
+LaunchCounts=
