@@ -84,6 +84,17 @@ DEFAULT_USER=$(whoami)
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+export GOPATH=~/go/
+export PATH=$PATH:~/.local/bin
+export PATH=$PATH:/snap/bin
+export PATH=$PATH:/usr/local/go/bin:/opt/bin
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$HOME/node-v6.11.2-linux-x64/bin/
+export PATH="$HOME/.cargo/bin:$PATH"
+export GOROOT=/usr/local/go
+export SOFTHSM2_CONF=$HOME/softhsm2.conf
+export GPG_TTY=$(tty)
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -94,12 +105,13 @@ alias tf="terraform"
 alias k="kubectl"
 alias kx="kubectx"
 alias kn="kubens"
+alias gl="launch_goland"
 
 alias zfg="subl ~/.zshrc"
-alias rsrc="source ~/.zshrc"
+alias src="source ~/.zshrc"
 alias xc="xclip -selection clipboard"
 alias gi="go install ./..."
-alias sudo='sudo -E env "PATH=$PATH"'
+alias sudo='sudo -E env "PATH=$PATH" '
 alias scode='sudo code --user-data-dir ~/codee'
 alias dc="docker-compose"
 alias dcu="docker-compose up"
@@ -107,6 +119,14 @@ alias dcr="docker-compose run"
 alias dclt="docker-compose logs --follow --tail=100"
 alias d="docker"
 alias dci=docker_install
+
+launch_goland() {
+    if [[ -z $1 ]]; then
+        goland .
+    else
+        goland "$@"
+    fi
+}
 
 docker_install() {
     installer=$1
@@ -120,13 +140,16 @@ docker_install() {
     docker rmi $installer
 }
 
-
+# sfs creates a temporary directory and mounts a remote filesystem to it. Usage: sfs core@ares.unchain.io
 sfs() {
     mkdir /tmp/$1
     sshfs $1:/ /tmp/$1
+
+    # Replace dolphin with the file explorer you use
     nohup dolphin /tmp/$1 &>/dev/null &
 }
 
+# sin adds a new entry to your ssh config file. Usage: sin ares core ares.unchain.io
 sin() {
 cat << EOF >> ~/.ssh/config
 
@@ -137,21 +160,47 @@ Host $1
 EOF
 }
 
-export GOPATH=~/go/
-export PATH=$PATH:/usr/local/go/bin:/opt/bin
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$HOME/node-v6.11.2-linux-x64/bin/
-export PATH="$HOME/.cargo/bin:$PATH"
-export GOROOT=/usr/local/go
-export SOFTHSM2_CONF=$HOME/softhsm2.conf
-export GPG_TTY=$(tty)
 
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# gvm usage: gvm install go1.11.1 -B; gvm use go1.11.1
 [[ -s "/home/enikolov/.gvm/scripts/gvm" ]] && source "/home/enikolov/.gvm/scripts/gvm"
 
-autoload -U +X bashcompinit && bashcompinit
+# vault completions
 complete -o nospace -C /home/enikolov/go/bin/vault vault
 
+# Nix
 if [ -e /home/enikolov/.nix-profile/etc/profile.d/nix.sh ]; then . /home/enikolov/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+# kubectl completions
 if [ /usr/bin/kubectl ]; then source <(kubectl completion zsh); fi
+
+# yakuake/konsole blur effect
+if [[ $(ps --no-header -p $PPID -o comm) =~ '^yakuake|konsole$' ]]; then
+        for wid in $(xdotool search --pid $PPID); do
+            xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id $wid; done
+fi
+
+# heph completions
+command -v heph >/dev/null && . <(heph completion --zsh)
+
+# zplug
+if [ -e ~/.zplug/init.zsh ]; then
+    source ~/.zplug/init.zsh
+    zplug "changyuheng/fz", defer:1
+
+
+    # Install plugins if there are plugins that have not been installed
+    if ! zplug check --verbose; then
+        printf "Install? [y/N]: "
+        if read -q; then
+            echo; zplug install
+        fi
+    fi
+
+    # Then, source plugins and add commands to $PATH
+    zplug load # --verbose
+fi
+
+autoload -U +X bashcompinit && bashcompinit
