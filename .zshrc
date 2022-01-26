@@ -70,6 +70,7 @@ zinit wait lucid light-mode for \
   blockf atpull'zinit creinstall -q .' \
       zsh-users/zsh-completions
 
+zinit light zdharma-continuum/zinit-annex-bin-gem-node
 zinit snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
 zinit pack"bgn+keys" for fzf
 zinit snippet OMZL::git.zsh
