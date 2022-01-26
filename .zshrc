@@ -1,9 +1,9 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 export GPG_TTY=$(tty)
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 zstyle :omz:plugins:ssh-agent lazy yes
 zstyle :omz:plugins:ssh-agent lifetime 10m
 
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
