@@ -1,206 +1,134 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-# Path to your oh-my-zsh installation.
-  export ZSH=/home/enikolov/.oh-my-zsh
-
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
-
-ZSH_THEME="powerlevel9k/powerlevel9k"
-#ZSH_THEME="sorin"
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
- # ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
- COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git z git-flow-completion go command-not-found common-aliases debian docker sudo zsh-autosuggestions zsh-syntax-highlighting)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-DEFAULT_USER=$(whoami)
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-export GOPATH=~/go/
-export PATH=$PATH:~/.local/bin
-export PATH=$PATH:/snap/bin
-export PATH=$PATH:/usr/local/go/bin:/opt/bin
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$HOME/node-v6.11.2-linux-x64/bin/
-export PATH="$HOME/.cargo/bin:$PATH"
-export GOROOT=/usr/local/go
-export SOFTHSM2_CONF=$HOME/softhsm2.conf
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 export GPG_TTY=$(tty)
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+zstyle :omz:plugins:ssh-agent lazy yes
+zstyle :omz:plugins:ssh-agent lifetime 10m
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-alias tf="terraform"
-alias k="kubectl"
-alias kx="kubectx"
-alias kn="kubens"
-alias gl="launch_goland"
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-alias zfg="subl ~/.zshrc"
-alias src="source ~/.zshrc"
-alias xc="xclip -selection clipboard"
-alias gi="go install ./..."
-alias sudo='sudo -E env "PATH=$PATH" '
-alias scode='sudo code --user-data-dir ~/codee'
-alias dc="docker-compose"
-alias dcu="docker-compose up"
-alias dcr="docker-compose run"
-alias dclt="docker-compose logs --follow --tail=100"
-alias d="docker"
-alias dci=docker_install
+# Set up the prompt
 
-launch_goland() {
-    if [[ -z $1 ]]; then
-        goland .
-    else
-        goland "$@"
-    fi
-}
+autoload -Uz promptinit
+promptinit
+prompt adam1
 
-docker_install() {
-    installer=$1
+setopt histignorealldups sharehistory
 
-    # default to ohmyssh images
-    if [[ ! $installer = *"/"* ]]; then
-      installer=ohmyssh/$installer
-    fi
+# Use emacs keybindings even if our EDITOR is set to vi
+bindkey -e
 
-    docker run --rm -v /opt/bin:/target $installer
-    docker rmi $installer
-}
+# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.zsh_history
 
-# sfs creates a temporary directory and mounts a remote filesystem to it. Usage: sfs core@ares.unchain.io
-sfs() {
-    mkdir /tmp/$1
-    sshfs $1:/ /tmp/$1
+# Use modern completion system
+autoload -Uz compinit
+compinit
 
-    # Replace dolphin with the file explorer you use
-    nohup dolphin /tmp/$1 &>/dev/null &
-}
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' menu select=2
+eval "$(dircolors -b)"
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
+zstyle ':completion:*' menu select=long
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
 
-# sin adds a new entry to your ssh config file. Usage: sin ares core ares.unchain.io
-sin() {
-cat << EOF >> ~/.ssh/config
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+### End of Zinit's installer chunk
 
-Host $1
-    User $2
-    HostName $3
+### Added by Zinit's installer
+if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
+    print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.local/share/zinit" && command chmod g-rwX "$HOME/.local/share/zinit"
+    command git clone https://github.com/zdharma-continuum/zinit "$HOME/.local/share/zinit/zinit.git" && \
+        print -P "%F{33} %F{34}Installation successful.%f%b" || \
+        print -P "%F{160} The clone has failed.%f%b"
+fi
 
-EOF
-}
+source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 
+zinit wait lucid light-mode for \
+  atinit"zicompinit; zicdreplay" \
+      zdharma-continuum/fast-syntax-highlighting \
+  atload"_zsh_autosuggest_start" \
+      zsh-users/zsh-autosuggestions \
+  blockf atpull'zinit creinstall -q .' \
+      zsh-users/zsh-completions
 
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+zinit snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
+zinit pack for fzf
+zinit snippet OMZL::git.zsh
+zinit snippet OMZP::git
+zinit snippet OMZP::command-not-found
+zinit snippet OMZP::sudo
+zinit load rupa/z
+zinit load changyuheng/fz
+zinit ice depth=1; zinit light romkatv/powerlevel10k
+zinit load asdf-vm/asdf
+zinit light Aloxaf/fzf-tab
 
-# gvm usage: gvm install go1.11.1 -B; gvm use go1.11.1
-[[ -s "/home/enikolov/.gvm/scripts/gvm" ]] && source "/home/enikolov/.gvm/scripts/gvm"
-
-# vault completions
-complete -o nospace -C /home/enikolov/go/bin/vault vault
-
-# Nix
-if [ -e /home/enikolov/.nix-profile/etc/profile.d/nix.sh ]; then . /home/enikolov/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+[ -f ~/.kubectl_aliases ] && source ~/.kubectl_aliases
 
 # kubectl completions
 if [ /usr/bin/kubectl ]; then source <(kubectl completion zsh); fi
 
-# yakuake/konsole blur effect
-if [[ $(ps --no-header -p $PPID -o comm) =~ '^yakuake|konsole$' ]]; then
-        for wid in $(xdotool search --pid $PPID); do
-            xprop -f _KDE_NET_WM_BLUR_BEHIND_REGION 32c -set _KDE_NET_WM_BLUR_BEHIND_REGION 0 -id $wid; done
-fi
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
-# heph completions
-command -v heph >/dev/null && . <(heph completion --zsh)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# zplug
-if [ -e ~/.zplug/init.zsh ]; then
-    source ~/.zplug/init.zsh
-    zplug "changyuheng/fz", defer:1
+bindkey '^[[1;5C' emacs-forward-word
+bindkey '^[[1;5D' emacs-backward-word
+bindkey '^[[3;5~' kill-word
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=12'
+alias zfg="code ~/.zshrc"
+alias dc=docker-compose
+alias dclt="docker-compose logs --tail 300 --follow"
+alias d=docker
+alias src="source ~/.zshrc"
+alias xc="xclip -sel clip"
 
 
-    # Install plugins if there are plugins that have not been installed
-    if ! zplug check --verbose; then
-        printf "Install? [y/N]: "
-        if read -q; then
-            echo; zplug install
-        fi
+echo-command-line() {
+    [[ -z $BUFFER ]] && zle up-history
+    if [[ $BUFFER == echo\ * ]]; then
+        LBUFFER="${LBUFFER#echo }"
+    else
+        LBUFFER="echo `printf %q $LBUFFER`"
     fi
+}
 
-    # Then, source plugins and add commands to $PATH
-    zplug load # --verbose
-fi
+zle -N echo-command-line
+# Defined shortcut keys: [Esc] [Esc]
+bindkey "\e\`" echo-command-line
 
-autoload -U +X bashcompinit && bashcompinit
+typeset -g POWERLEVEL9K_KUBECONTEXT_SHOW_ON_COMMAND='kubectl|helm|kubens|kubectx|oc|istioctl|kogito|k9s|helmfile|make'
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(kubecontext os_icon dir vcs newline prompt_char)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status asdf root_indicator command_execution_time background_jobs history direnv virtualenv anaconda pyenv goenv nodeenv fvm luaenv jenv plenv phpenv scalaenv haskell_stack kubecontext terraform aws aws_eb_env azure gcloud google_app_cred context nordvpn ranger nnn vim_shell midnight_commander nix_shell todo timewarrior taskwarrior time newline)
+typeset -g POWERLEVEL9K_ASDF_PROMPT_ALWAYS_SHOW=true
+typeset -g POWERLEVEL9K_ASDF_NODEJS_SHOW_ON_UPGLOB='*.js|package.json'
+typeset -g POWERLEVEL9K_ASDF_ERLANG_SHOW_ON_UPGLOB='mix.lock|*.ex'
+typeset -g POWERLEVEL9K_ASDF_ELIXIR_SHOW_ON_UPGLOB='mix.lock|*.ex'
+typeset -g POWERLEVEL9K_ASDF_GOLANG_SHOW_ON_UPGLOB='go.mod'
+typeset -g POWERLEVEL9K_ASDF_RUST_SHOW_ON_UPGLOB='Cargo.lock|Cargo.toml|*.rs'
+typeset -g POWERLEVEL9K_ASDF_SOLIDITY_SHOW_ON_UPGLOB='truffle-config.js|*.sol'
+typeset -g POWERLEVEL9K_ASDF_SQLITE_SHOW_ON_UPGLOB='*.sqlite'
+
