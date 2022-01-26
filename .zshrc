@@ -71,7 +71,7 @@ zinit wait lucid light-mode for \
       zsh-users/zsh-completions
 
 zinit snippet OMZ::plugins/ssh-agent/ssh-agent.plugin.zsh
-zinit pack"default+keys" for fzf
+zinit pack"bgn+keys" for fzf
 zinit snippet OMZL::git.zsh
 zinit snippet OMZP::git
 zinit snippet OMZP::command-not-found
